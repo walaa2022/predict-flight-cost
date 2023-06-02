@@ -23,7 +23,8 @@ def prediction(Airline,Source,Destination,Dep_Time,Arrival_Time,Duration,Total_S
     test_df.at[0,"Journey_DayOfWeek"] = Journey_DayOfWeek
     st.dataframe(test_df)
     result = Model.predict(test_df)[0]
-    return result
+    rounded_results = round(results, 2)
+    return rounded_result 
 
     
 def main():
@@ -46,7 +47,7 @@ def main():
     
     if st.button("predict the flight cost"):
         result = prediction(Airline, Source, Destination, Dep_Time, Arrival_Time,Duration, Total_Stops, Additional_Info, Journey_Month,Journey_DayOfWeek)
-        st.text(f"The flight ticket will cost {[result]} dollars")
+        st.text(f"The flight ticket will cost {rounded_result} dollars")
         
 if __name__ == '__main__':
     main()    
