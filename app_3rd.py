@@ -35,7 +35,7 @@ def main():
     Destination= st.selectbox("Destination" , ['Cochin','Banglore','Delhi','New Delhi','Hyderabad','Kolkata'])
     Dep_Time = st.slider("Dep_Time" , min_value= 0 , max_value=23 , value=0,step=1)
     Arrival_Time = st.slider("Arrival_Time" , min_value= 0 , max_value=23 , value=0,step=1)
-    Duration = st.slider("Duration" , min_value= 0 , max_value=50 , value=0,step= 0.5)
+    Duration = st.slider("Duration" , min_value= 0 , max_value=50 , value=0,step=1)
     Total_Stops = st.selectbox("Total_Stops" , [0, 1, 2, 3])
     Additional_Info = st.selectbox("Additional_Info" , ['no info','in-flight meal not included',
                                                         'no check-in baggage included','1 long layover',
