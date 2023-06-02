@@ -23,7 +23,7 @@ def prediction(Airline,Source,Destination,Dep_Time,Arrival_Time,Duration,Total_S
     test_df.at[0,"Journey_DayOfWeek"] = Journey_DayOfWeek
     st.dataframe(test_df)
     result = Model.predict(test_df)[0]
-    rounded_results = round(results, 2)
+    rounded_result = round(result, 2)
     return rounded_result 
 
     
