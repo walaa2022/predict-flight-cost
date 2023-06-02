@@ -46,7 +46,7 @@ def main():
     
     if st.button("predict the flight cost"):
         result = prediction(Airline, Source, Destination, Dep_Time, Arrival_Time,Duration, Total_Stops, Additional_Info, Journey_Month,Journey_DayOfWeek)
-        st.text(f"The flight ticket will cost {result} dollars")
+        st.text(f"The flight ticket will cost {result}")
         
 if __name__ == '__main__':
     main()    
